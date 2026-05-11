@@ -6,9 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
-    "build:css": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
-    "build:files": "copyfiles -u 1 src/*.html src/js/**/* src/images/**/* src/fonts/**/* dist",
-    "build": "npm run build:css && npm run build:files",
+    "build_css": "tailwindcss -i ./src/input.css -o ./dist/css/output.css --minify",
+    "build_html": "copyfiles index.html dist",
+    "build_assets": "copyfiles -u 0 \"img/**/*\" \"js/**/*\" \"fonts/**/*\" dist",
+    "build": "npm run build_css && npm run build_html && npm run build_assets", 
     "deploy": "gh-pages -d dist"
   },
   "keywords": [],
