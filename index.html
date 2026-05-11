@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Network Tailwind</title>
+    <!-- Libraries  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <!-- Tailwind -->
+    <link href="./output.css" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" href="img/favicon/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+    <header class="main-header w-full fixed top-0 z-[100]" id="main-header">
+        <div class="container mx-auto px-4">
+            <div class="main-header__wrap flex justify-between items-center" id="main-header__wrap">
+                <div class="flex items-center gap-[35px] xl:gap-[45px]">
+                    <a href="#" class="flex items-center justify-center z-10" id="logo-link">
+                        <img src="img/home-page/home-section/logo.svg" alt="logo" class="logo-image">
+                    </a>
+                    <nav class="menu nav-block__menu hidden lg:block">
+                        <ul class="flex items-center gap-5">
+                            <li class="menu-list__item"><a href="#features-point" class="menu-list__link">Features</a></li>
+                            <li class="menu-list__item"><a href="#about-point" class="menu-list__link">About us</a></li>
+                            <li class="menu-list__item"><a href="#menu-point" class="menu-list__link">Menu</a></li>
+                            <li class="menu-list__item"><a href="#apps-point" class="menu-list__link">Apps</a></li>
+                            <li class="menu-list__item"><a href="#testimonials-point" class="menu-list__link">Testimonials</a></li>
+                            <li class="menu-list__item"><a href="#feedback-point" class="menu-list__link">Contact us</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="flex items-center justify-end gap-[15px]">
+                    <a href="#menu-point" class="relative z-10 flex items-center justify-center h-[45px] px-[30px] text-white font-normal bg-[#DC780B] rounded-[5px] transition group" id="booking-btn">
+                        Booking Now
+                        <span class="absolute bottom-[14px] left-0 right-0 h-[1px] bg-white rounded-[15px] scale-x-0 origin-center transition-transform duration-300 ease-out group-hover:scale-x-[0.6]"></span>
+                    </a>
+                    <div class="flex lg:hidden flex-col w-[38px] h-[31px] z-10" id="burger-menu">
+                        <div class="burger-menu__line top-line" id="top-line"></div>
+                        <div class="burger-menu__line middle-line" id="middle-line"></div>
+                        <div class="burger-menu__line bottom-line" id="bottom-line"></div>
+                    </div>
+                    <div class="hidden fixed top-0 left-0 w-full h-full bg-[gainsboro] z-[9] 
+                                pt-[120px] md:pt-[188px] mobile-landscape:pt-[70px] mobile-landscape:pb-[40px] px-[100px] pb-[60px] mobile-landscape:pb-[40px] text-center overflow-auto" id="hidden-nav-block">
+                        <nav class="menu hidden-nav-block__menu">
+                            <ul class="flex flex-col gap-[20px] lg:gap-6">
+                                <li class="menu-list__item"><a href="#features-point" class="hidden-menu-list__link">Features</a></li>
+                                <li class="menu-list__item"><a href="#about-point" class="hidden-menu-list__link">About us</a></li>
+                                <li class="menu-list__item"><a href="#menu-point" class="hidden-menu-list__link">Menu</a></li>
+                                <li class="menu-list__item"><a href="#apps-point" class="hidden-menu-list__link">Apps</a></li>
+                                <li class="menu-list__item"><a href="#testimonials-point" class="hidden-menu-list__link">Testimonials</a></li>
+                                <li class="menu-list__item"><a href="#feedback-point" class="hidden-menu-list__link">Contact us</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="overflow-hidden">
+        <section class="relative overflow-visible">
+            <div class="container mx-auto px-4">
+                <div class="grid md:grid-cols-2 items-stretch min-h-screen gap-10 pt-[70px] md:pt-[0] mobile-landscape:pt-[70px] mobile-landscape:grid-cols-1">
+                    <div class="flex flex-col justify-center z-20">
+                        <h1 class="mb-3 lg:mb-6 text-4xl md:text-5xl mobile-landscape:text-4xl font-bold leading-tight">Making time a good time by making food the good food.</h1>
+                        <p class="mb-[20px] lg:mb-8 text-gray-600 max-w-md mobile-landscape:max-w-full">There are many things are needed to start the Fast Food Business. You need not only Just Food Stalls with Persons but also specialized equipment</p>
+                        <div class="flex flex-wrap justify-start gap-4 xl:gap-8">
+                            <a href="" class="project-button h-[42px] lg:h-[60px] text-[14px] lg:text-[16px] px-[20px] lg:px-[35px] border border-[#DC780B] hover:bg-white hover:text-[#DC780B] hover:scale-[1.2]">Order Now</a>
+                            <a href="" class="project-button h-[42px] lg:h-[60px] text-[14px] lg:text-[16px] px-[20px] lg:px-[35px] border border-[#DC780B] hover:bg-white hover:text-[#DC780B] hover:scale-[1.2]">Food Details</a>
+                        </div>
+                    </div>
+                    <div class="relative h-screen z-10 hidden md:block mobile-landscape:hidden">
+                        <div data-relative-input="true" id="scene" >
+                            <img data-depth="-0.9" src="img/home-page/home-section/meet-on-pan-image.jpg" alt="fried-meet" 
+                            class=" absolute max-w-none
+                                    top-[calc(50%-355px)]
+                                    left-[calc(50%-387px)]
+                                    scale-[0.75]
+                                    lg:left-[calc(50%-336px)]
+                                    lg:scale-100">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="pt-[90px] md:pt-[120px] pb-[20px]" id="features-point">
+            <div class="container mx-auto px-4">
+                <div class="text-center">
+                    <h4 class="section-subheadline mb-[10px] text-center">Features</h4>
+                    <h2 class="mb-[45px] text-center capitalize ">Food with a New Passion</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-[45px] md:gap-8">
+                    <div class="flex flex-col items-center px-[20px]">
+                        <div class="features-block__image-wrap">
+                            <img src="img/home-page/features-section/building.png" alt="building" class="features-block__image">
+                        </div>
+                        <div class="text-center">
+                            <h3 class="leading-[0.9] mb-[15px]">Quality Food</h3>
+                            <p class="features-block__text">It can be a very secure path to earn good money and make you very successful creative entrepreneur.</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center px-[20px]">
+                        <div class="features-block__image-wrap">
+                            <img src="img/home-page/features-section/courier.png" alt="courier" class="features-block__image">
+                        </div>
+                        <div class="text-center">
+                            <h3 class="leading-[0.9] mb-[15px]">Food Delivery</h3>
+                            <p class="features-block__text">It can be a very secure path to earn good money and make you very successful creative entrepreneur.</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center px-[20px]">
+                        <div class="features-block__image-wrap">
+                            <img src="img/home-page/features-section/smile.png" alt="" class="features-block__image">
+                        </div>
+                        <div class="text-center">
+                            <h3 class="leading-[0.9] mb-[15px]">Super Taste</h3>
+                            <p class="features-block__text">It can be a very secure path to earn good money and make you very successful creative entrepreneur.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="relative pt-[90px] md:pt-[135px] pb-[20px]" id="about-point">
+            <div class="absolute inset-0 -z-10 overflow-visible">
+                <img src="img/home-page/about-section/bg-ellipse.svg" alt="ellipse" class="
+                absolute top-[-145px] left-[0] lg:left-[-35px]
+                max-w-none h-auto">
+            </div>
+            <div class="container mx-auto px-4">
+                <div class="flex flex-col-reverse xl:flex-row items-center justify-between gap-2 xl:gap-24">
+                    <div class="w-full xl:w-1/2">
+                        <div class="flex justify-center items-center">
+                            <img src="img/home-page/about-section/eating-lady.png" alt="" class="relative z-[5] 
+                            w-full md:w-[82%] lg:w-3/5 xl:w-full mobile-landscape:w-[60%] h-auto">
+                        </div>
+                    </div>
+                    <div class="w-full xl:w-1/2">
+                        <div class="text-center xl:text-left mb-[28px] lg:mb-[50px] xl:mb-0">
+                            <h4 class="section-subheadline mb-[10px]">About us</h4>
+                            <h2 class="mb-[30px]">Food Stalls with Persons but  to  Product marketing plane
+                                catlogues etc to. </h2>
+                            <p class="mb-[30px]">There are many things are needed to start the Fast Food Business. You need not only Just Food Stalls with Persons but also 
+                                equipment  make your marketing plane Effective.</p>
+                            <a href="#" class="project-button mr-auto ml-auto xl:mr-auto xl:ml-0 tracking-normal hover:tracking-[2px]">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="pt-[90px] lg:pt-[135px] pb-[20px]" id="menu-point">
+            <div class="container mx-auto px-4">
+                <div class="text-center">
+                    <h4 class="section-subheadline mb-[10px]">Menu</h4>
+                    <h2 class="mb-[25px]">Food Full of treaty Love</h2>
+                    <p class="max-w-[748px] mx-auto mb-[60px]">There are many things are needed to start the Fast Food Business. You need not only Just Food Stalls with Persons but also specialized equipment, Skills to manage Customers, </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mobile-landscape:grid-cols-2 gap-[30px]">
+                    <div class="mb-[30px] border-r border-black/10 rounded-r-[10px]">
+                        <div class="relative overflow-hidden flex rounded-[75px_10px_75px_0]">
+                            <a href="img/home-page/menu-section/dish-1.png" data-fancybox class="w-full">
+                                <img src="img/home-page/menu-section/dish-1.png" alt="dish" class="w-full">
+                            </a>
+                        </div>
+                        <div class="border border-black/10 border-t-0 border-r-0 rounded-b-[10px] px-[25px] pt-[20px] pb-[25px]">
+                            <div class="dish-block__headline-wrap">
+                                <h3 class="dish-block__headline">Vegie Muffen</h3>
+                                <h3 class="dish-block__price">16$</h3>
+                            </div>
+                            <p class="dish-block__text">There are many things are needed to start the Fast Food Business.</p>
+                            <div class="flex justify-between items-center">
+                                <a href="" class="relative flex items-center justify-center w-[36px] h-[34px] bg-[#DC780B] rounded-[5px]">
+                                    <span class="absolute inset-0 flex items-center justify-center">
+                                        <img src="img/home-page/menu-section/plus.svg" alt="plus">
+                                    </span>
+                                </a>
+                                <div class="flex gap-1">
+                                    <img src="img/home-page/menu-section/golden-star.svg" alt="star" class="dish-block__star">
+                                    <img src="img/home-page/menu-section/golden-star.svg" alt="star" class="dish-block__star">
+                                    <img src="img/home-page/menu-section/golden-star.svg" alt="star" class="dish-block__star">
+                                    <img src="img/home-page/menu-section/golden-star.svg" alt="star" class="dish-block__star">
+                                    <img src="img/home-page/menu-section/silver-star.svg" alt="star" class="dish-block__star">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-[30px] border-r border-black/10 rounded-r-[10px]">
+                        <div class="relative overflow-hidden flex rounded-[75px_10px_75px_0]">
+                            <a href="img/home-page/menu-section/dish-2.png" data-fancybox class="w-full">
+                                <img src="img/home-page/menu-section/dish-2.png" alt="dish" class="w-full">
+                            </a>
+                        </div>
+                        <div class="border border-black/10 border-t-0 border-r-0 rounded-b-[10px] px-[25px] pt-[20px] pb-[25px]">
+                            <div class="dish-block__headline-wrap">
+                                <h3 class="dish-block__headline">Salad</h3>
+                                <h3 class="dish-block__price">12$</h3>
+                            </div>
+                            <p class="dish-block__text">There are many things are needed to start the Fast Food Business.</p>
+                            <div class="flex justify-between items-center">
+                                <a href="" class="relative flex items-center justify-center w-[36px] h-[34px] bg-[#DC780B] rounded-[5px]">
+                                    <span class="absolute inset-0 flex items-center justify-center">
+                                        <img src="img/home-page/menu-section/plus.svg" alt="plus">
+                                    </span>
+                                </a>
+                                <div class="flex gap-1">
+                                    <img src="img/home-page/menu-section/golden-star.svg" alt="star" class="dish-block__star">
+                                    <img src="img/home-page/menu-section/golden-star.svg" alt="star" class="dish-block__star">
+                                    <img src="img/home-page/menu-section/golden-star.svg" alt="star" class="dish-block__star">
+                                    <img src="img/home-page/menu-section/golden-star.svg" alt="star" class="dish-block__star">
+                                    <img src="img/home-page/menu-section/golden-star.svg" alt="star" class="dish-block__star">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-[30px] border-r border-black/10 rounded-r-[10px]">
+                        <div class="relative overflow-hidden flex rounded-[75px_10px_75px_0]">
+                            <a href="img/home-page/menu-section/dish-3.png" data-fancybox class="w-full">
+                                <img src="img/home-page/menu-section/dish-3.png" alt="dish" class="w-full">
+                            </a>
+                        </div>
+                        <div class="border border-black/10 border-t-0 border-r-0 rounded-b-[10px] px-[25px] pt-[20px] pb-[25px]">
+                            <div class="dish-block__headline-wrap">
+                                <h3 class="dish-block__headline">Burger</h3>
+                                <h3 class="dish-block__price">10$</h3>
+                            </div>
+                            <p class="dish-block__text">There are many things are needed to start the Fast Food Business.</p>
+                            <div class="flex justify-between items-center">
+                                <a href="" class="relative flex items-center justify-center w-[36px] h-[34px] bg-[#DC780B] rounded-[5px]">
+                                    <span class="absolute inset-0 flex items-center justify-center">
+                                        <img src="img/home-page/menu-section/plus.svg" alt="plus">
+                                    </span>
+                                </a>
+                                <div class="flex gap-1">
+                                    <img src="img/home-page/menu-section/golden-star.svg" alt="star" class="dish-block__star">
+                                    <img src="img/home-page/menu-section/golden-star.svg" alt="star" class="dish-block__star">
+                                    <img src="img/home-page/menu-section/golden-star.svg" alt="star" class="dish-block__star">
+                                    <img src="img/home-page/menu-section/silver-star.svg" alt="star" class="dish-block__star">
+                                    <img src="img/home-page/menu-section/silver-star.svg" alt="star" class="dish-block__star">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-[30px] border-r border-black/10 rounded-r-[10px]">
+                        <div class="relative overflow-hidden flex rounded-[75px_10px_75px_0]">
+                            <a href="img/home-page/menu-section/dish-4.png" data-fancybox class="w-full">
+                                <img src="img/home-page/menu-section/dish-4.png" alt="dish" class="w-full">
+                            </a>
+                        </div>
+                        <div class="border border-black/10 border-t-0 border-r-0 rounded-b-[10px] px-[25px] pt-[20px] pb-[25px]">
+                            <div class="dish-block__headline-wrap">
+                                <h3 class="dish-block__headline">Del Steak</h3>
+                                <h3 class="dish-block__price">14$</h3>
+                            </div>
+                            <p class="dish-block__text">There are many things are needed to start the Fast Food Business.</p>
+                            <div class="flex justify-between items-center">
+                                <a href="" class="relative flex items-center justify-center w-[36px] h-[34px] bg-[#DC780B] rounded-[5px]">
+                                    <span class="absolute inset-0 flex items-center justify-center">
+                                        <img src="img/home-page/menu-section/plus.svg" alt="plus">
+                                    </span>
+                                </a>
+                                <div class="flex gap-1">
+                                    <img src="img/home-page/menu-section/golden-star.svg" alt="star" class="dish-block__star">
+                                    <img src="img/home-page/menu-section/golden-star.svg" alt="star" class="dish-block__star">
+                                    <img src="img/home-page/menu-section/silver-star.svg" alt="star" class="dish-block__star">
+                                    <img src="img/home-page/menu-section/silver-star.svg" alt="star" class="dish-block__star">
+                                    <img src="img/home-page/menu-section/silver-star.svg" alt="star" class="dish-block__star">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-[30px] border-r border-black/10 rounded-r-[10px]">
+                        <div class="relative overflow-hidden flex rounded-[75px_10px_75px_0]">
+                            <a href="img/home-page/menu-section/dish-5.png" data-fancybox class="w-full">
+                                <img src="img/home-page/menu-section/dish-5.png" alt="dish" class="w-full">
+                            </a>
+                        </div>
+                        <div class="border border-black/10 border-t-0 border-r-0 rounded-b-[10px] px-[25px] pt-[20px] pb-[25px]">
+                            <div class="dish-block__headline-wrap">
+                                <h3 class="dish-block__headline">Egg Masala</h3>
+                                <h3 class="dish-block__price">9$</h3>
+                            </div>
+                            <p class="dish-block__text">There are many things are needed to start the Fast Food Business.</p>
+                            <div class="flex justify-between items-center">
+                                <a href="" class="relative flex items-center justify-center w-[36px] h-[34px] bg-[#DC780B] rounded-[5px]">
+                                    <span class="absolute inset-0 flex items-center justify-center">
+                                        <img src="img/home-page/menu-section/plus.svg" alt="plus">
+                                    </span>
+                                </a>
+                                <div class="flex gap-1">
+                                    <img src="img/home-page/menu-section/golden-star.svg" alt="star" class="dish-block__star">
+                                    <img src="img/home-page/menu-section/golden-star.svg" alt="star" class="dish-block__star">
+                                    <img src="img/home-page/menu-section/golden-star.svg" alt="star" class="dish-block__star">
+                                    <img src="img/home-page/menu-section/golden-star.svg" alt="star" class="dish-block__star">
+                                    <img src="img/home-page/menu-section/silver-star.svg" alt="star" class="dish-block__star">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-[30px] border-r border-black/10 rounded-r-[10px]">
+                        <div class="relative overflow-hidden flex rounded-[75px_10px_75px_0]">
+                            <a href="img/home-page/menu-section/dish-6.png" data-fancybox class="w-full">
+                                <img src="img/home-page/menu-section/dish-6.png" alt="dish" class="w-full">
+                            </a>
+                        </div>
+                        <div class="border border-black/10 border-t-0 border-r-0 rounded-b-[10px] px-[25px] pt-[20px] pb-[25px]">
+                            <div class="dish-block__headline-wrap">
+                                <h3 class="dish-block__headline">Peach Melba</h3>
+                                <h3 class="dish-block__price">15$</h3>
+                            </div>
+                            <p class="dish-block__text">There are many things are needed to start the Fast Food Business.</p>
+                            <div class="flex justify-between items-center">
+                                <a href="" class="relative flex items-center justify-center w-[36px] h-[34px] bg-[#DC780B] rounded-[5px]">
+                                    <span class="absolute inset-0 flex items-center justify-center">
+                                        <img src="img/home-page/menu-section/plus.svg" alt="plus">
+                                    </span>
+                                </a>
+                                <div class="flex gap-1">
+                                    <img src="img/home-page/menu-section/golden-star.svg" alt="star" class="dish-block__star">
+                                    <img src="img/home-page/menu-section/golden-star.svg" alt="star" class="dish-block__star">
+                                    <img src="img/home-page/menu-section/golden-star.svg" alt="star" class="dish-block__star">
+                                    <img src="img/home-page/menu-section/silver-star.svg" alt="star" class="dish-block__star">
+                                    <img src="img/home-page/menu-section/silver-star.svg" alt="star" class="dish-block__star">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="pt-[90px] lg:pt-[135px] pb-[20px]" id="apps-point">
+            <div class="container mx-auto py-4">
+                <div class="flex flex-col lg:flex-row justify-center items-center gap-10">
+                    <div class="w-full md:w-10/12 lg:w-7/12 text-center lg:text-left mb-[50px] lg:mb-0">
+                        <h4 class="section-subheadline mb-[20px] md:mb-[5px]">Take away</h4>
+                        <h2 class="mb-[30px]">Food Stalls with Persons but  to  Product marketing plane. </h2>
+                        <p class="mb-[40px] max-w-[565px]">There are many things are needed to start the Fast Food Business. You need not only Just Food Stalls with Persons but also specialized equipmentwith Persons but also  Just Food Stalls with Persons.</p>
+                        <div class="flex items-center justify-around md:justify-center lg:justify-start mobile-landscape:justify-center gap-[20px] ">
+                            <a href="#" class="project-button
+                                min-w-[132px]
+                                px-[10px] lg:px-[30px]
+                                bg-[#150C01] border-[1.5px] border-[#150C01] text-white rounded-[5px]
+                                hover:bg-white hover:text-[#150C01] hover:border-black/35">
+                                <img src="img/home-page/app-section/apple-logo.svg" alt="apple-logo" class="mr-[4px] md:mr-[8px]">
+                                <span class="text-[14px] leading-[1.9]">App Store</span>
+                            </a>
+                            <a href="#" class="project-button 
+                                min-w-[132px]
+                                px-[10px] lg:px-[30px]
+                                bg-[#150C01] border-[1.5px] border-[#150C01] text-white rounded-[5px]
+                                hover:bg-white hover:text-[#150C01] hover:border-black/35">
+                                <img src="img/home-page/app-section/google-play-logo.svg" alt="google-play-logo" class="mr-[8px]">
+                                <span class="text-[14px] leading-[1.9]">Google Play</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lg:w-5/12 mobile-landscape:w-7/12 w-full flex justify-center items-center">
+                        <img src="img/home-page/app-section/mobile-phone.png" 
+                                class="max-w-[80%]
+                                        md:max-w-full
+                                        h-auto" alt="mobile-phone">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="pt-[90px] lg:pt-[135px] pb-[90px]" id="testimonials-point">
+            <div class="container mx-auto py-4">
+                <div class="text-center">
+                    <h4 class="section-subheadline mb-[15px]">Testimonials</h4>
+                    <h2 class="mb-[25px]">Making Food great again and again</h2>
+                    <p class="w-full sm:w-[85%] lg:w-[75%] mx-auto mb-[20px]">You need not only Just Food Stalls with Persons but also specialized equipment, Skills to manage Customers, Effective Product catlogues etc to make your.</p>
+                </div>
+                <div>
+                    <div class="swiper testimonials-swiper">
+                        <div class="swiper-wrapper testimonials-swiper-wrapper">
+                            <div class="swiper-slide text-center pt-[60px] md:pt-[40px]">
+                                <img src="img/home-page/testimonials-section/lady-photo-two.png" alt="photo" class="mb-[22px] md:mb-[40px] mx-auto w-[72px] h-[72px]">
+                                <p class="w-[70%] mx-auto mb-[20px]">The food quality exceeded my expectations. Everything was fresh and perfectly cooked.</p>
+                                <div class="mb-[35px] flex justify-center gap-1">
+                                    <img src="img/home-page/menu-section/golden-star.svg" alt="star" class="star">
+                                    <img src="img/home-page/menu-section/golden-star.svg" alt="star" class="star">
+                                    <img src="img/home-page/menu-section/golden-star.svg" alt="star" class="star">
+                                    <img src="img/home-page/menu-section/golden-star.svg" alt="star" class="star">
+                                    <img src="img/home-page/menu-section/golden-star.svg" alt="star" class="star">
+                                </div>
+                                <p class="mb-[5px]">Emily Carter</p>
+                                <p>Marketing Specialist</p>
+                            </div>
+                            <div class="swiper-slide text-center pt-[60px] md:pt-[40px]">
+                                <img src="img/home-page/testimonials-section/man-photo-one.png" alt="photo" class="mb-[22px] md:mb-[40px] mx-auto w-[72px] h-[72px]">
+                                <p class="w-[70%] mx-auto mb-[20px]">Fast delivery and amazing taste. Definitely ordering again!</p>
+                                <div class="mb-[35px] flex justify-center gap-1">
+                                    <img src="img/home-page/menu-section/golden-star.svg" alt="star" class="star">
+                                    <img src="img/home-page/menu-section/golden-star.svg" alt="star" class="star">
+                                    <img src="img/home-page/menu-section/golden-star.svg" alt="star" class="star">
+                                    <img src="img/home-page/menu-section/golden-star.svg" alt="star" class="star">
+                                    <img src="img/home-page/menu-section/silver-star.svg" alt="star" class="star">
+                                </div>
+                                <p class="mb-[5px]">Jason Miller</p>
+                                <p>Software Engineer</p>
+                            </div>
+                            <div class="swiper-slide text-center pt-[60px] md:pt-[40px]">
+                                <img src="img/home-page/testimonials-section/lady-photo-three.png" alt="photo" class="mb-[22px] md:mb-[40px] mx-auto w-[72px] h-[72px]">
+                                <p class="w-[70%] mx-auto mb-[20px]">Great service and a cozy vibe. One of my favorite places now.</p>
+                                <div class="mb-[35px] flex justify-center gap-1">
+                                    <img src="img/home-page/menu-section/golden-star.svg" alt="star" class="star">
+                                    <img src="img/home-page/menu-section/golden-star.svg" alt="star" class="star">
+                                    <img src="img/home-page/menu-section/golden-star.svg" alt="star" class="star">
+                                    <img src="img/home-page/menu-section/silver-star.svg" alt="star" class="star">
+                                    <img src="img/home-page/menu-section/silver-star.svg" alt="star" class="star">
+                                </div>
+                                <p class="mb-[5px]">Sophia Nguyen</p>
+                                <p>UI/UX Designer</p>
+                            </div>
+                        </div>
+                        <div class="swiper-button-prev testimonials-siper-button-prev"></div>
+                        <div class="swiper-button-next testimonials-siper-button-next"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bg-[rgba(220,120,11,0.25)] pt-[70px] lg:pt-[115px] pb-[120px]" id="feedback-point">
+            <div class="container mx-auto py-4">
+                <div class="text-center">
+                    <h4 class="section-subheadline mb-[15px]">Contact Us</h4>
+                    <h2 class="w-full md:w-[60%] lg:w-[80%] xl:w-[70%] mx-auto mb-[45px]">Food Stalls with Persons but also specialized equipment, Skills to manage.</h2>
+                </div>
+                <div class="w-full">
+                    <form action="" class="flex justify-center">
+                        <div class="contacts-form__input-wrap">
+                            <input type="text" id="contacts-form__input" class="
+                                w-full 
+                                h-[55px] md:h-[75px]
+                                px-[25px] md:px-[35px]
+                                pr-[120px] md:pr-[160px]
+                                bg-white rounded-[10px] outline-none border-none
+                                text-[16px] leading-[2.5] font-normal
+                                text-black placeholder:opacity-50" placeholder="Enter your message">
+                            <button type="submit" class="project-button absolute top-0 right-0 h-[55px] md:h-[75px] px-[30px] md:px-[55px] 
+                            rounded-[10px] text-[18px] leading-[2.3]">Send</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="main-footer">
+        <div class="bg-[#252525] py-[60px] lg:py-[85px] px-[40px]">
+            <div class="container mx-auto py-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mobile-landscape:grid-cols-2 gap-10">
+                    <div class="footer-block">
+                        <img src="img/home-page/home-section/logo.svg" alt="logo" class="mb-[25px]">
+                        <div class="contacts-link__container">
+                            <a href="#" class="block text-[14px] leading-[1.1] text-white/70 mb-[15px]">www.company-name.com</a>
+                            <a href="mailto:company-name@gmail.com" class="block text-[14px] leading-[1.1] text-white/70 mb-[15px]">company-name@gmail.com</a>
+                            <a href="tel:+380001111111" class="block text-[14px] leading-[1.1] text-white/70 mb-[15px]">+38(000)111-11-11</a>
+                        </div>
+                    </div>
+                    <div class="footer-block">
+                        <h5 class="text-white font-bold mb-[25px]">Home</h5>
+                        <ul class="footer-block__list">
+                            <li class="mb-[20px]"><a href="#" class="block text-[14px] leading-[1.1] text-white/70">Landingpage</a></li>
+                            <li class="mb-[20px]"><a href="#" class="block text-[14px] leading-[1.1] text-white/70">Documentation</a></li>
+                            <li class="mb-[20px]"><a href="#" class="block text-[14px] leading-[1.1] text-white/70">Referral Program</a></li>
+                            <li class="mb-[20px]"><a href="#" class="block text-[14px] leading-[1.1] text-white/70">UI & UX Design</a></li>
+                            <li class="footer-block__list-item"><a href="#" class="block text-[14px] leading-[1.1] text-white/70">Web Design</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-block">
+                        <h5 class="text-white font-bold mb-[25px]">Menu</h5>
+                        <ul class="footer-block__list">
+                            <li class="mb-[20px]"><a href="#" class="block text-[14px] leading-[1.1] text-white/70">Landingpage</a></li>
+                            <li class="mb-[20px]"><a href="#" class="block text-[14px] leading-[1.1] text-white/70">Documentation</a></li>
+                            <li class="mb-[20px]"><a href="#" class="block text-[14px] leading-[1.1] text-white/70">Referral Program</a></li>
+                            <li class="mb-[20px]"><a href="#" class="block text-[14px] leading-[1.1] text-white/70">UI & UX Design</a></li>
+                            <li class="footer-block__list-item"><a href="#" class="block text-[14px] leading-[1.1] text-white/70">Web Design</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-block">
+                        <h5 class="text-white font-bold mb-[25px]">Company</h5>
+                        <ul class="footer-block__list">
+                            <li class="mb-[20px]"><a href="#" class="block text-[14px] leading-[1.1] text-white/70">Landingpage</a></li>
+                            <li class="mb-[20px]"><a href="#" class="block text-[14px] leading-[1.1] text-white/70">Documentation</a></li>
+                            <li class="mb-[25px]"><a href="#" class="block text-[14px] leading-[1.1] text-white/70">Referral Program</a></li>
+                            <li>
+                                <div class="flex gap-[15px]">
+                                    <a href="#" class="social-media__link">
+                                        <img src="img/home-page/footer-section/instagram-logo.svg" alt="instagram-logo" class="social-media__image instagram-logo">
+                                    </a>
+                                    <a href="#" class="social-media__link">
+                                        <img src="img/home-page/footer-section/facebook-logo.svg" alt="facebook-logo" class="social-media__image facebook-logo">
+                                    </a>
+                                    <a href="#" class="social-media__link">
+                                        <img src="img/home-page/footer-section/twitter-logo.svg" alt="twitter-logo" class="social-media__image twitter-logo">
+                                    </a>
+                                    <a href="#" class="social-media__link">
+                                        <img src="img/home-page/footer-section/youtube-logo.svg" alt="youtube-logo" class="social-media__image youtube-logo">
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
