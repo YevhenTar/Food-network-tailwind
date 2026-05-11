@@ -1,0 +1,195 @@
+@import "../css/fonts.css";
+@import "tailwindcss";
+
+@custom-variant mobile-landscape (@media (orientation: landscape) and (max-height: 500px));
+
+@utility container {
+    width: 100%;
+    box-sizing: border-box;
+    margin-inline: auto;
+    padding-inline: 1rem;
+
+    @media (width >= 640px) {
+        max-width: 540px;
+    }
+
+    @media (width >= 768px) {
+        max-width: 720px;
+    }
+
+    @media (width >= 1024px) {
+        max-width: 960px;
+    }
+
+    @media (width >= 1280px) {
+        max-width: 1140px;
+    }
+
+    @media (width >= 1536px) {
+        max-width: 1320px;
+    }
+}
+
+@layer base {
+    html {
+        box-sizing: border-box;
+    }
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: inherit;
+    }
+
+    body {
+        font-family: "Roboto", sans-serif;
+        @apply m-0 text-[16px] leading-[1.5] text-[#150C01] antialiased;
+    }
+
+    section {
+        position: relative;
+        overflow: visible;
+    }
+
+    ul {
+        @apply list-none m-0 p-0;
+    }
+
+    a {
+        @apply no-underline text-[16px] text-[#150C01] leading-[1.2] text-inherit;
+    }
+
+    h1, h2, h3, h4, h5 {
+        font-family: "Philosopher";
+        @apply leading-[1.1] m-0;
+    }
+
+    h1 {
+        @apply text-[38px] md:text-[46px] lg:text-[48px] font-bold;
+    }
+
+    h2 {
+        @apply text-[26px] lg:text-[32px] font-bold;
+    }
+
+    h3 {
+        @apply text-[22px] lg:text-[25px] font-bold;
+    }
+
+    h4 {
+        @apply text-[16px] font-medium;
+    }
+
+    h5 {
+        @apply text-[18px] font-normal leading-[1.5];
+    }
+
+    p {
+        @apply text-[14px] lg:text-[16px] leading-[1.6] lg:leading-[1.5] m-0;
+    }
+}
+
+@layer components {
+    .body-blocked {
+        overflow: hidden;
+    }
+    .main-header {
+        @apply bg-transparent transition-colors duration-300;
+    }
+    .main-header.is-sticky {
+        @apply bg-[#d5d5ce];
+    }
+    .main-header__wrap {
+        @apply h-[65px] md:h-[75px] lg:h-[105px]
+            transition-all duration-300;
+    }
+    .main-header.is-sticky .main-header__wrap {
+        @apply h-[60px] md:h-[65px] lg:h-[80px];
+    }
+    .main-header,
+    .main-header__wrap {
+        @apply will-change-[height,background-color];
+    }
+    .menu-list__link {
+        @apply opacity-60 px-[15px] py-[10px] xl:px-[20px]
+                rounded bg-transparent
+                transition-all duration-300
+                hover:bg-[#150C01] hover:text-white;
+        }
+    .burger-menu__line {
+        @apply h-[5px] w-full rounded-[4px] bg-black;
+        margin-top: 7px;
+    }
+    .top-line{
+        margin-top: 0;
+    }
+
+    .change .top-line{
+        margin-top: 10px;
+        transform: rotate(-135deg);
+        transition: transform 0.8s ease 0.8s,  margin-top 0.8s ease;
+    }
+    .change .middle-line{
+        margin-top: -1px;
+        transform: scale(0); 
+        transition: margin-top 0.8s ease, transform 0.8s ease;
+    }
+    .change .bottom-line{
+        margin-top: -9px;
+        transform: rotate(-225deg);
+        transition: margin-top 0.8s ease, transform 0.8s ease 0.8s;
+    }
+    .close .top-line{
+        margin-top: 0;
+        transform: rotate(0);
+        transition: transform 0.8s ease,  margin-top 0.8s ease 0.8s;
+    }
+    .close .middle-line{
+        margin-top: 7px;
+        transform: scale(1); 
+        transition: margin-top 0.8s ease 0.8s, transform 0.8s ease 0.8s;
+    }
+    .close .bottom-line{
+        margin-top: 7px;
+        transform: rotate(0);
+        transition: margin-top 0.8s ease 0.8s, transform 0.8s ease;
+    }
+    .section-subheadline {
+        font-family: "Roboto", sans-serif;
+        @apply leading-[1.2] tracking-[0.2em] uppercase text-[#DC780B] opacity-70;
+    }
+    .project-button {
+        @apply flex items-center justify-center
+                w-fit 
+                h-[55px] md:h-[60px]
+                px-[30px] md:px-[35px]
+                text-white font-medium
+                bg-[#DC780B]
+                rounded-[5px]
+                transition-all duration-300;
+    }
+    .features-block__image-wrap {
+        @apply mb-[20px] sm:mb-[35px];
+    }
+    .dish-block__headline-wrap{
+        @apply flex justify-between items-center mb-[20px];
+    }
+    .dish-block__headline {
+        @apply text-[22px] lg:text-[20px];
+    }
+    .dish-block__price {
+        @apply text-[25px] lg:text-[22px];
+    }
+    .dish-block__text {
+        @apply text-[14px] mb-[20px];
+    }
+    .testimonials-swiper {
+        @apply w-full md:w-[85%] lg:w-[70%] mx-auto;
+    }
+    .contacts-form__input-wrap {
+        @apply relative flex justify-center w-full md:w-[90%] lg:w-full max-w-[750px];
+    }
+    .footer-block {
+        @apply mb-[45px] lg:mb-0 pl-0 lg:pl-[38px];
+    }
+}

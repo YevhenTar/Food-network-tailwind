@@ -1,0 +1,26 @@
+{
+  "name": "healthy-food-tailwind",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "build:css": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
+    "build:files": "copyfiles -u 1 src/*.html src/js/**/* src/images/**/* src/fonts/**/* dist",
+    "build": "npm run build:css && npm run build:files",
+    "deploy": "gh-pages -d dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@tailwindcss/cli": "^4.2.2",
+    "tailwindcss": "^4.2.2"
+  },
+  "devDependencies": {
+    "copyfiles": "^2.4.1",
+    "gh-pages": "^6.3.0"
+  }
+}
